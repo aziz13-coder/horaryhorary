@@ -74,7 +74,9 @@ logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 
-CORS(app)  # Enable CORS for all routes
+# Allow cross-origin requests from the Electron frontend and browsers
+# "supports_credentials=True" lets browsers send cookies/auth headers if needed
+CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
 
 
 
