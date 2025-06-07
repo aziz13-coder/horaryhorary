@@ -108,6 +108,11 @@ Creates: `frontend/release/*.appx`
 - Check browser console for JavaScript errors
 - Ensure backend is running on port 5000
 
+### Vite build parse error
+- If you see a message like `Parse error @:1:1` during `npm run build`, remove the
+  `node_modules` folder and run `npm install` again. This refreshes all
+  dependencies and usually resolves the issue.
+
 ### Port 5000 already in use
 - Close any other applications using port 5000
 - Or kill existing Python processes: `taskkill /f /im python.exe`
